@@ -1,0 +1,77 @@
+.cluster-l
+  display: flex
+  flex-wrap: wrap
+  gap: var(--gap, 1.5rem)
+  justify-content: flex-start
+  align-items: center
+  position: relative
+
+  &[center]
+    justify-content: center
+    
+  &[align-unset]
+    align-items: unset
+
+  &[end]
+    justify-content: flex-end
+
+  &[start]
+    justify-content: flex-start
+
+  &[between]
+    justify-content: space-between
+
+  &[around]
+    justify-content: space-around
+
+  &[column]
+    flex-direction: column
+  
+  &[pointer]
+    &:hover
+      cursor: pointer
+
+  &[tight]
+    gap: 0.25rem
+
+  &[narrow]
+    gap: var(--s0, 1rem)
+
+  &[squeezed]
+    gap: var(--s-1, 0.5rem)
+
+  &[gap-3]
+    gap: 3rem
+    
+  &[no-gap]
+    gap: unset
+
+  &[align-start]
+    align-items: flex-start
+    
+  &[stretch]
+    align-items: stretch
+
+  &[align-unset]
+    align-items: unset
+
+  &[no-wrap]
+    flex-wrap: nowrap
+
+  &[row]
+    flex-flow: row
+
+  &[row-reverse]
+    flex-flow: row-reverse
+
+  &[full-width]
+    width: 100%
+
+  &[full-height]
+    height: 100%
+
+  &[hover-shadow]
+    &:hover
+      background-color: #EBE7EE
+      cursor: pointer;
+      transition: color 0.5s ease-in-out;

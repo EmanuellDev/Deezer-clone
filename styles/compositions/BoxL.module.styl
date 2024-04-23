@@ -1,0 +1,64 @@
+.box-l
+  padding: var(--gap, 1.5rem)
+  border: var(--border-thin, .0625rem) solid var(--color-grey-4, #F0F0F0)
+  border-radius: 0.25rem
+  color: var(--color-grey-8, #595959)
+
+  &[compact]
+    overflow: hidden
+    padding: 0
+
+  &[full-width]
+    width 100%
+  
+  &[transparent]
+    background-color: transparent !important
+  
+  &[no-sharp]
+    border-radius: 0
+
+  &[borderless]
+    border-width: 0
+    border-color: transparent
+
+  &[flex-center]
+    display: flex
+    align-items: center
+    justify-content: center
+
+  &[grid-center]
+    display: grid
+    align-items: center
+
+  &[padding-1]
+    padding: 1rem
+  
+  &[no-padding]
+    padding: 0
+
+  &[padding-regular]
+    padding: 0.5rem
+
+  &[squeezed]
+    padding: var(--s-1, 0.5rem)
+  
+  &[max-content]
+    width: max-content
+
+  &[full-height]
+    height: 100%
+    
+  &[margin]
+    margin: 1rem
+    
+  &[pointer]
+    cursor: pointer
+  
+  &[border-solid]
+    border: 1px solid #d1d2d6 !important;
+
+  &[hover-shadow]
+    &:hover
+      box-shadow: 0px 3px -3px 4px rgba(0, 0, 0, 0.12);
+      cursor: pointer;
+      transition: color 0.5s ease-in-out;

@@ -1,0 +1,77 @@
+.stack-l
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+
+  &[recursive] > *
+    margin-block: 0
+
+  &[padding]
+    padding: 1rem
+
+  & > * + *,
+  &[recursive] * + *
+    margin-block-start: var(--gap, 1.5rem)
+
+  &[squeezed] > * + *
+    margin-block-start: 0
+
+  &[dense] > * + *
+    margin-block-start: calc(var(--gap, 1.5rem) / 6)
+
+  &[compact] > * + *
+    margin-block-start: calc(var(--gap, 1.5rem) / 2)
+
+  &[medium] > * + *
+    margin-block-start: calc(var(--gap, 1.5rem))
+
+  &[wide] 
+    gap: calc(var(--gap, 1.5rem) * 2)
+
+  &[big] 
+    gap: calc(var(--gap, 1.5rem) * 3)
+  
+  &[between]
+    justify-content: space-between
+
+  &[no-gap]
+    gap: 0
+  
+  &[gap-1]
+    gap: 0.25rem
+  
+  &[gap-2]
+    gap: 0.5rem
+
+  &[gap-4]
+    gap: 1rem
+  
+  &[flex-1]
+    flex: 1
+
+  &[full-width]
+    width: 100%
+    
+  &[full-height]
+    height: 100%
+
+  &[overflow-hidden]
+    overflow hidden
+
+  &[align-center]
+    align-items: center
+
+  &[text-left]
+    text-align: left
+
+  &[justify-center]
+    justify-content: center
+
+  &[align-start]
+    align-items: flex-start
+
+  &[no-wrap]
+    flex-wrap: nowrap
+
+  .margin-start-zero
+    margin-block-start:  0
