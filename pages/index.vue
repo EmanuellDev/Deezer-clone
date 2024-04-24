@@ -1,8 +1,8 @@
 <script setup lang="ts" async>
   import BoxL from '@/components/LayoutCompositions/BoxL.vue';
   import StackL from '@/components/LayoutCompositions/StackL.vue';
-  import TextL from '@/components/LayoutCompositions/TextL.vue';
   import { colors } from '@/styles/colors/colors';
+  import TextL from '@/components/LayoutCompositions/TextL.vue';
 
   const { data: posts } = await useFetch<[{ name: string }] | null>(
     '/mock/data.json',
