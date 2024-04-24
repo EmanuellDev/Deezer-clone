@@ -1,10 +1,14 @@
 <script setup lang="ts">
-import BoxL from "@/components/LayoutCompositions/BoxL.vue";
-import { colors } from "@/styles/colors/colors";
-import { HomeFilled, ThunderboltOutlined } from "@ant-design/icons-vue";
-import ClusterL from "~/components/LayoutCompositions/ClusterL.vue";
-import TextL from "~/components/LayoutCompositions/TextL.vue";
-import StackL from "@/components/LayoutCompositions/StackL.vue";
+  import BoxL from '@/components/LayoutCompositions/BoxL.vue';
+  import { colors } from '@/styles/colors/colors';
+  import { HomeFilled, ThunderboltOutlined } from '@ant-design/icons-vue';
+  import ClusterL from '~/components/LayoutCompositions/ClusterL.vue';
+  import TextL from '~/components/LayoutCompositions/TextL.vue';
+  import StackL from '@/components/LayoutCompositions/StackL.vue';
+  import Playlists from './Playlists.vue';
+  import { menuItems } from './menuConfig';
+
+  const route = useRoute();
 </script>
 
 <template>
@@ -17,27 +21,28 @@ import StackL from "@/components/LayoutCompositions/StackL.vue";
       <StackL wide>
         <NuxtImg src="/logo.svg" alt="logo" width="126" />
         <StackL>
-          <ClusterL squeezed>
-            <HomeFilled />
-            <NuxtLink href="/"><TextL bold large>Início</TextL></NuxtLink>
-          </ClusterL>
-          <ClusterL squeezed>
-            <ThunderboltOutlined />
-            <NuxtLink href="/page2">
-              <TextL bold large>Explorar</TextL>
+          <ClusterL
+            squeezed
+            v-for="(menu, index) in menuItems"
+            :class="{ 'menu-active': route.path === menu.page }"
+            :key="index"
+          >
+            <Component :is="menu.icon" :style="{ color: colors.black }" />
+            <NuxtLink :href="menu.page">
+              <TextL bold large>{{ menu.title }}</TextL>
             </NuxtLink>
-          </ClusterL>
-          <ClusterL squeezed>
-            <HeartOutlined />
-            <TextL bold large>Favoritos</TextL>
           </ClusterL>
         </StackL>
       </StackL>
     </BoxL>
+    <Playlists />
   </BoxL>
 </template>
 
 <style lang="stylus" scoped>
-input
-  all: unset
+  input
+    all: unset
+  .menu-active
+    *
+      color: v-bind('colors.purple7')
 </style>

@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import Topbar from "@/widgets/Topbar/topbar.vue";
+  import Topbar from '@/widgets/Topbar/index.vue';
+  import Sidebar from '@/widgets/Sidebar/index.vue';
 </script>
 
 <template>
@@ -19,31 +20,31 @@ import Topbar from "@/widgets/Topbar/topbar.vue";
 </template>
 
 <style>
-header {
-  grid-area: header;
-}
-article {
-  grid-area: content;
-  height: 100dvh;
-}
-aside {
-  grid-area: sidebar;
-  height: 100%;
-}
-.wrapper {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  grid-template-areas:
-    "sidebar  header"
-    "sidebar content";
-}
-@media (max-width: 500px) {
-  .wrapper {
-    grid-template-columns: 4fr;
-    grid-template-areas:
-      "header"
-      "content"
-      "sidebar";
+  header {
+    grid-area: header;
   }
-}
+  article {
+    grid-area: content;
+    height: 100dvh;
+  }
+  aside {
+    grid-area: sidebar;
+    height: 100%;
+  }
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+      'sidebar  header'
+      'sidebar content';
+  }
+  @media (max-width: 500px) {
+    .wrapper {
+      grid-template-columns: 4fr;
+      grid-template-areas:
+        'header'
+        'content'
+        'sidebar';
+    }
+  }
 </style>

@@ -1,24 +1,24 @@
 <script setup lang="ts" async>
-import BoxL from "~/components/LayoutCompositions/BoxL.vue";
-import StackL from "~/components/LayoutCompositions/StackL.vue";
-import TextL from "~/components/LayoutCompositions/TextL.vue";
+  import BoxL from '@/components/LayoutCompositions/BoxL.vue';
+  import StackL from '@/components/LayoutCompositions/StackL.vue';
+  import TextL from '@/components/LayoutCompositions/TextL.vue';
+  import { colors } from '@/styles/colors/colors';
 
-const { data: posts } = await useFetch<[{ name: string }] | null>(
-  "/mock/data.json",
-  {
-    server: false,
-    lazy: true,
-  }
-);
+  const { data: posts } = await useFetch<[{ name: string }] | null>(
+    '/mock/data.json',
+    {
+      server: false,
+      lazy: true,
+    },
+  );
 </script>
 
 <template>
   <BoxL borderless>
     <StackL compact>
-      <TextL large bold>Flow: ouvir de acordo como se sente</TextL>
-      <TextL mid>
-        Uma interminável e personalizada sequência de música que você gosta e de
-        novas descobertas
+      <TextL large bold>Flow: listen how you feel</TextL>
+      <TextL mid :color="colors.grey7">
+        An endless, personalized stream of music you like and new discoveries
       </TextL>
       <TextL mid v-for="(post, index) in posts" :key="index">
         {{ post.name }}
@@ -27,10 +27,10 @@ const { data: posts } = await useFetch<[{ name: string }] | null>(
   </BoxL>
 </template>
 <style>
-body {
-  margin: 0;
-}
-a {
-  text-decoration: auto;
-}
+  body {
+    margin: 0;
+  }
+  a {
+    text-decoration: auto;
+  }
 </style>
