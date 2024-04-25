@@ -43,5 +43,5 @@
     all: unset
   .menu-active
     *
-      color: v-bind('colors.purple7')
+      color: v-bind('colors.purple8')
 </style>

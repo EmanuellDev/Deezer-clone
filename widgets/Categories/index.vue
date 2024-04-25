@@ -5,7 +5,7 @@
 </script>
 
 <template>
-  <ClusterL squeezed between>
+  <ClusterL start squeezed>
     <template v-for="item in categoriesItens" :key="item.id">
       <CategoryItem :data="item" />
     </template>

@@ -24,7 +24,12 @@
       borderless
       padding-regular
     >
-      <NuxtImg :src="props.data.image" :alt="props.data.title" />
+      <NuxtImg
+        class="icon"
+        width="130"
+        :src="props.data.image"
+        :alt="props.data.title"
+      />
       <BoxL
         class="overlay-click"
         borderless

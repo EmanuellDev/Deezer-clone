@@ -64,6 +64,7 @@ export const colors = {
   purple5: '#9254de',
   purble6: '#B37FEB',
   purple7: '#531dab',
+  purple8: '#A238FF',
   orange1: '#fff7e6',
   orange4: '#ffc069',
   orange5: '#ffa940',

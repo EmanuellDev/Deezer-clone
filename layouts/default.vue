@@ -1,6 +1,7 @@
 <script setup lang="ts">
   import Topbar from '@/widgets/Topbar/index.vue';
   import Sidebar from '@/widgets/Sidebar/index.vue';
+  import MusicPlayer from '@/widgets/MusicPlayer/index.vue';
 </script>
 
 <template>
@@ -15,6 +16,9 @@
       <aside>
         <Sidebar />
       </aside>
+      <footer>
+        <MusicPlayer />
+      </footer>
     </div>
   </a-extract-style>
 </template>
@@ -36,7 +40,8 @@
     grid-template-columns: 1fr 3fr;
     grid-template-areas:
       'sidebar  header'
-      'sidebar content';
+      'sidebar content'
+      'footer footer';
   }
   @media (max-width: 500px) {
     .wrapper {

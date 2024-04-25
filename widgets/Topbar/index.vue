@@ -7,7 +7,7 @@
   import BoxL from '@/components/LayoutCompositions/BoxL.vue';
   import ClusterL from '@/components/LayoutCompositions/ClusterL.vue';
   import { colors } from '@/styles/colors/colors';
-  import { Button, Input, InputSearch, Flex } from 'ant-design-vue';
+  import { Input } from 'ant-design-vue';
   import { SearchOutlined, BellOutlined } from '@ant-design/icons-vue';
 </script>
 
@@ -15,7 +15,7 @@
   <BoxL no-sharp borderless class="topbar">
     <ClusterL between full-width>
       <Input
-        placeholder="Artists, generes, podcasts..."
+        placeholder="Artists, genres, podcasts..."
         :style="{ width: '345px', height: '48px' }"
       >
         <template #prefix>
@@ -23,10 +23,10 @@
         </template>
       </Input>
       <ClusterL>
-        <a-badge count="5" color="#A238FF">
+        <a-badge count="5" :color="colors.purple8">
           <BellOutlined style="font-size: 1.2rem" />
         </a-badge>
-        <a-avatar color="#FFFF"> E </a-avatar>
+        <a-avatar :color="colors.whiteDefault"> EA </a-avatar>
       </ClusterL>
     </ClusterL>
   </BoxL>
