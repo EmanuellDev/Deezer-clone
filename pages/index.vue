@@ -3,6 +3,7 @@
   import StackL from '@/components/LayoutCompositions/StackL.vue';
   import { colors } from '@/styles/colors/colors';
   import TextL from '@/components/LayoutCompositions/TextL.vue';
+  import CategoriesWidget from '@/widgets/Categories/index.vue';
 
   const { data: posts } = await useFetch<[{ name: string }] | null>(
     '/mock/data.json',
@@ -20,9 +21,7 @@
       <TextL mid :color="colors.grey7">
         An endless, personalized stream of music you like and new discoveries
       </TextL>
-      <TextL mid v-for="(post, index) in posts" :key="index">
-        {{ post.name }}
-      </TextL>
+      <CategoriesWidget />
     </StackL>
   </BoxL>
 </template>

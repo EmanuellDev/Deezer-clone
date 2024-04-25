@@ -1,7 +1,6 @@
 <script setup lang="ts">
   import BoxL from '@/components/LayoutCompositions/BoxL.vue';
   import { colors } from '@/styles/colors/colors';
-  import { HomeFilled, ThunderboltOutlined } from '@ant-design/icons-vue';
   import ClusterL from '~/components/LayoutCompositions/ClusterL.vue';
   import TextL from '~/components/LayoutCompositions/TextL.vue';
   import StackL from '@/components/LayoutCompositions/StackL.vue';
